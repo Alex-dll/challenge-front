@@ -1,0 +1,44 @@
+.headerContainer {
+    height: 4rem;
+}
+
+.headerContent {
+  max-width: 1300px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  height: 4rem;
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  nav {
+    height: 4rem;
+
+    a {
+      display: inline-block;
+      position: relative;
+      padding: 0 0.5rem;
+      height: 4rem;
+      line-height: 4rem;
+
+      & + a {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.iconsContainer {
+  padding: 0 0.2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    & + img {
+      margin-left: 3rem;
+    }
+  }
+}
