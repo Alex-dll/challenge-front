@@ -3,7 +3,11 @@ import styles from './styles.module.scss'
 import logo from '../../../public/images/logo.png'
 import Image from 'next/image'
 
-export function Header() {
+interface HeaderProps {
+  onOpenCartModal: () => void;
+}
+
+export function Header({ onOpenCartModal }: HeaderProps) {
   return (
     <header className={styles.headerContainer}>
     <div className={styles.headerContent}>
@@ -19,9 +23,19 @@ export function Header() {
       </nav>
 
       <div className={styles.iconsContainer}>
-        <img src="/images/search.svg" alt="Buscar" />
-        <img src="/images/person.svg" alt="Contacto" />
-        <img src="/images/cart.svg" alt="Carrinho" />
+        <button type='button'>
+          <img src="/images/search.svg" alt="Buscar" />
+        </button>
+        <button type='button'>
+          <img src="/images/person.svg" alt="Contacto" />
+        </button>
+        <button type='button'>
+          <img
+            src="/images/cart.svg" 
+            alt="Carrinho" 
+            onClick={onOpenCartModal}
+          />
+         </button>
       </div>
 
     </div>

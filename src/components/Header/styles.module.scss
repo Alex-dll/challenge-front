@@ -36,8 +36,11 @@
   display: flex;
   justify-content: space-between;
 
-  img {
-    & + img {
+  button {
+    border: 0;
+    background: transparent;
+
+    & + button {
       margin-left: 3rem;
     }
   }
