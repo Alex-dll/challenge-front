@@ -1,5 +1,6 @@
 .container {
   margin-bottom: 1rem;
+  padding: 1rem;
 
   & + .container {
     padding-top: 2rem;
@@ -9,41 +10,39 @@
 
   main {
     display: flex;
+    max-width: 18rem;
   
     aside {
         img {
-          max-height: 5rem;
+          height: 5rem;
         }
     }
     
     div {
       padding: 0.2rem;
-  
+      
       p {
-        font-size:0.8rem;
-  
-        line-height: 1.5em;
-        height: 3em;
-        width: 100%;
-        white-space: normal;
+        display: block; 
+        display: -webkit-box;
+        max-width: 190px;
+        font-size: 0.8rem;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
-  
-        margin-bottom: 1rem;
       }
-  
-  
+     
       span {
-        font-size: 0.8rem;
+        font-size: 1rem;
         & + span {
-          margin-left: 3rem;
+          margin-left: 1rem;
         }     
       }
-    }
-    
-    .money {
-      font-weight: bold;
-      color: #14b21c;
+
+      .money {
+        font-weight: bold;
+        color: #14b21c;
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useOnKeyPressedCartDetailsModalHandler } from '../../hooks/useOnKeyPressedHandlers';
 import { api } from '../../services/api';
+import { formatPrice } from '../../util/format';
 import { ProductItem } from '../ProductItem';
 import styles from './styles.module.scss'
 
@@ -37,12 +38,27 @@ export function CartModal({isOpen, onRequestClose}: ModalProps) {
     })()
   }, []);
 
+  const sumCartValue =
+    cart.item.reduce((sumTotal, product) => {
+      return sumTotal + product.bestPrice
+    }, 0)
+
+    const price = sumCartValue;
+    const beforeDot = price.toString().substring(0, price.toString().length - 2);
+    const afterDor = price
+      .toString()
+      .substring(price.toString().length - 2, price.toString().length);
+    const fullPrice = parseFloat(beforeDot + '.' + afterDor);
+
+  const formattedPrice = formatPrice(fullPrice)
+ 
+ 
   if(!isOpen) {
     return null
   }
-
   return (   
       <div className={styles.modal}>
+
         <div className={styles.products}>
            {cart.item.map(product => ( 
              <ProductItem 
@@ -51,7 +67,8 @@ export function CartModal({isOpen, onRequestClose}: ModalProps) {
              />
           ))}
         </div>
-         <p>Total do pedido: {`R$ 20.356,95`}</p>
+
+         <p>Total do pedido:  <span>{formattedPrice}</span> </p>
           
         <button>FINALIZAR COMPRA</button>
       </div>

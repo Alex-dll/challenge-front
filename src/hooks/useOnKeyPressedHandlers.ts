@@ -6,7 +6,7 @@ export const useOnKeyPressed = (handleKeyPressed: (event: any) => void) => {
     return () => {
       window.removeEventListener('keydown', handleKeyPressed);
     };
-  }, [])
+  }, [handleKeyPressed])
 }
 
 export const useOnKeyPressedCartDetailsModalHandler = (closeModal: () => void) => {

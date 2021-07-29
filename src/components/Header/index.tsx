@@ -43,7 +43,12 @@ export function Header() {
             src="/images/cart.svg" 
             alt="Carrinho" 
             onClick={handleOpenOrCloseCartDetailsModal}
-          />
+        />
+        {isVisibleCartDetailsModal ? (
+          <div className={styles.triangle}></div>
+        ) : (
+          null
+        )}
           </div>
          </button>
       </div>
