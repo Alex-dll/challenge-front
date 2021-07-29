@@ -1,50 +1,27 @@
-.container {
-  margin-bottom: 1rem;
+.modal {
+  position: absolute;
+  top: 3rem;
 
-  & + .container {
-    padding-top: 2rem;
-    margin-top: 1rem;
-    border-top: 1px solid rgb(233, 233, 233);
+  .products {
+    height: calc(470px - 5rem);
   }
 
-  main {
+  p {
+    height: 2rem;
+    
     display: flex;
-  
-    aside {
-        img {
-          max-height: 5rem;
-        }
-    }
-    
-    div {
-      padding: 0.2rem;
-  
-      p {
-        font-size:0.8rem;
-  
-        line-height: 1.5em;
-        height: 3em;
-        width: 100%;
-        white-space: normal;
-        overflow: hidden;
-        text-overflow: ellipsis;
-  
-        margin-bottom: 1rem;
-      }
-  
-  
-      span {
-        font-size: 0.8rem;
-        & + span {
-          margin-left: 3rem;
-        }     
-      }
-    }
-    
-    .money {
-      font-weight: bold;
-      color: #14b21c;
-    }
+    justify-content: center;
+  }
+
+  button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #14b21c;
+
+    color: var(--white);
+    font-weight: bold;
+    width: 18rem;
+    height: 3rem;
   }
 }
-
