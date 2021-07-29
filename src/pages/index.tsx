@@ -21,7 +21,7 @@ export default function Home() {
   return (
   <>
   <Head>
-     <title>Home | Agencia e Plus</title>
+     <title>Home | Agência e Plus</title>
   </Head>
 
   <Header onOpenCartModal={handleOpenCartModal}/>

@@ -1,11 +1,11 @@
 .headerContainer {
-    height: 4rem;
+    height: 2rem;
 }
 
 .headerContent {
   max-width: 1300px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
-  height: 4rem;
+  height: 3rem;
   margin: 0 auto;
   padding: 2rem;
 
@@ -14,14 +14,14 @@
   justify-content: space-between;
 
   nav {
-    height: 4rem;
+    height: 3rem;
 
     a {
       display: inline-block;
       position: relative;
       padding: 0 0.5rem;
-      height: 4rem;
-      line-height: 4rem;
+      height: 3rem;
+      line-height: 3rem;
 
       & + a {
         margin-left: 0.5rem;
@@ -32,7 +32,7 @@
 
 .iconsContainer {
   padding: 0 0.2rem;
-  height: 2rem;
+  height: 3rem;
   display: flex;
   justify-content: space-between;
 
@@ -41,7 +41,11 @@
     background: transparent;
 
     & + button {
-      margin-left: 3rem;
+      margin-left: 2.7rem;
+    }
+
+    img {
+      height: 2rem;
     }
   }
 }
