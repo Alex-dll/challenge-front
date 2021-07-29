@@ -28,7 +28,7 @@
       margin-left: 0.5rem;
     }
   }
-  
+
   button {
     margin: 0;
     padding: 0;
@@ -39,5 +39,11 @@
     font-weight: bold;
     width: 19rem;
     height: 3rem;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
   }
 }
