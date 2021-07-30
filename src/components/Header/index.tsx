@@ -13,16 +13,15 @@ export function Header() {
     <header className={styles.headerContainer}>
     <div className={styles.headerContent}>
       <Image 
-        src={logo} 
-        alt="Agencia E Plus" 
-      />
+      src={logo} 
+      alt="Agencia E Plus" />
+
       <nav>
           <a>Lorem Ipsom</a>
           <a>Lorem Ipsom</a>
           <a>Lorem Ipsom</a>
           <a>Lorem Ipsom</a>
       </nav>
-
 
       <div className={styles.iconsContainer}>
         <button type='button'>

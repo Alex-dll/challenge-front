@@ -13,6 +13,17 @@
   align-items: center;
   justify-content: space-between;
 
+  .headerMenu {
+    display: flex;
+    max-width: 150rem;
+
+    align-items: center;
+
+    nav {
+      margin-left: 7rem;
+    }
+  }
+
   nav {
     height: 3rem;
 
@@ -68,3 +79,11 @@
     border-right: 1rem solid transparent;
     border-bottom: 1rem solid #f0f0f0;
 }
+
+@media (max-width: 1033) {
+    .headerMenu {
+      img {
+        display: none;
+      }
+    }
+  }
